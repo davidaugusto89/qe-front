@@ -4,7 +4,7 @@ Frontend para cadastro consumindo API RESTFul, utilizando `Vue.JS`, e `Vuetify`.
 
 ## Requisitos básicos
 
-> Node.js
+> Node.js >= 19.x
 
 
 > Git
