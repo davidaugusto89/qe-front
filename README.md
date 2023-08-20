@@ -1,6 +1,6 @@
 # Frontend
 
-Frontend para cadastro simples (Nome e Data Nascimento) consumindo API RESTFul, utilizando `Vue.JS`, e `Vuetify `.
+Frontend para cadastro consumindo API RESTFul, utilizando `Vue.JS`, e `Vuetify`.
 
 ## Requisitos básicos
 
