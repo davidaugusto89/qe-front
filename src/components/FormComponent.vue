@@ -25,6 +25,7 @@
             :label="field.label"
             :required="field.required || false"
             :maxlength="field.maxlenght"
+            :rules="[validateCpfCnpj]"
             @change="saveData(field.model, $event)"
           ></v-text-field>
 
@@ -124,12 +125,18 @@ export default {
   },
   methods: {
     validateCpfCnpj(value) {
-      const numericValue = value.replace(/\D/g, "");
-
-      if (/^\d{11}$/.test(numericValue) || /^\d{14}$/.test(numericValue)) {
-        return true;
+      if (typeof value !== "undefined" && value.length < 0) {
+        return "Campo obrigatório";
       } else {
-        return "Insira um CPF ou CNPJ válido";
+        let length = typeof value !== "undefined" ? value.length : 0;
+        let validate = false;
+
+        if (length === 14) {
+          validate = this.$validateCPF(value);
+        } else if (length === 18) {
+          validate = this.$validateCNPJ(value);
+        }
+        return validate === false ? "CPF/CPNJ inválido" : true;
       }
     },
 
@@ -143,8 +150,6 @@ export default {
     },
 
     loadData(response) {
-      console.log("---------loadData FormComponent ------------");
-      console.log(response);
       this.data = response;
       this.json = response;
     },

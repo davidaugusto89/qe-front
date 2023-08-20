@@ -39,9 +39,6 @@ export default createStore({
                 size: 3,
                 type: "cpf_cnpj",
                 required: true,
-                rules: [
-                  (v) => !!v || "Campo obrigatório",
-                ]
               },
             ],
           },
