@@ -5,6 +5,7 @@ Frontend para cadastro consumindo API RESTFul, utilizando `Vue.JS`, e `Vuetify`.
 ## Requisitos básicos
 
 > Node.js >= 19.x
+
 > Git
 
 ![Vue.JS](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D) ![Vuetify](https://img.shields.io/badge/vuetify-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
