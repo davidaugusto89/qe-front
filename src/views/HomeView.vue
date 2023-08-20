@@ -1,18 +1,13 @@
 <template>
-  <HelloWorld />
+  <div>LOGIN</div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-
-// Components
-import HelloWorld from '../components/HelloWorld.vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'HomeView',
+  name: "HomeView",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 });
 </script>
